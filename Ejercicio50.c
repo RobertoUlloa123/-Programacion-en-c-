@@ -2,7 +2,7 @@
 
 int main()
 {
-    printf("Hello World");
+    printf("Ejercicio 50");
 
     return 0;
 }

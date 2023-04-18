@@ -15,7 +15,7 @@ int main()
         /* Si el número ingresado es negativo, el programa lo indica y sale del ciclo */
         if(n<0)
         {
-            printf("Es un numero negativo\n");
+            printf("El número ingresado es negativo.\n");
             break;
         } 
         /* Si el número ingresado es 0, se sale del ciclo */
@@ -35,16 +35,24 @@ int main()
         }
 
         /* Si el número es primo y no es 1, se suma a la variable suma y se incrementa el contador cont */
-        if(n!=1 && primo)
+        if(n != 1 && primo)
         {
             suma = suma + n;
             cont++;
-            promedio = (float)suma / cont; /*se calcula el promedio*/
         }
-    } while (n != 0); /*El ciclo se repetirá hasta que el usuario ingrese 0*/ 
+    } while (n != 0); /* El ciclo se repetirá hasta que el usuario ingrese 0 */ 
+
+    /* Si no se ingresaron números primos, el promedio será 0 */
+    if (cont == 0) {
+        promedio = 0;
+    } 
+    else {
+        /* Se calcula el promedio de los números primos ingresados */
+        promedio = (float) suma / cont;
+    }
 
     /* Se imprime el promedio de los números primos ingresados, con dos decimales */
     printf("El promedio de los números primos ingresados es: %.2f\n", promedio);
 
     return 0; 
-}    
+}
